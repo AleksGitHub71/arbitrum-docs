@@ -6,16 +6,13 @@ sidebar_position: 7
 content_type: how-to
 ---
 
-import PublicPreviewBannerPartial from '../partials/_orbit-public-preview-banner-partial.md';
 import CustomizeCautionBannerPartial from '../partials/_orbit-customize-caution-banner-partial.md';
-
-<PublicPreviewBannerPartial />
 
 <CustomizeCautionBannerPartial />
 
 ## Cases where you may want to consider customizing your own ArbOS upgrade
 
-1. When you want to make changes to your Nitro code that affect the State Transition Function, or STF (you may refer to the [Customize STF docs](./customize-stf.mdx#Preface)), and
+1. When you want to make changes to your Nitro code that affect the State Transition Function, or STF (you may refer to the [Customize STF docs](./customize-stf.mdx#introduction)), and
 
 2. If your desired changes need to be made to a live and operational Orbit chain
 
@@ -29,7 +26,7 @@ Below, you will find 4 examples of ArbOS-related code changes and, generally, ho
 
 ### 1. Add a new method to exsiting precompile on a specific ArbOS version:
 
-After you add `sayHi()` to `ArbSys.go` according to the guide in [customize precompile option 1](./customize-precompile.mdx#option-1-Add-new-methods-to-an-existing-precompile),
+After you add `sayHi()` to `ArbSys.go` according to the guide in [customize precompile option 1](./customize-precompile.mdx#option-1-add-new-methods-to-an-existing-precompile),
 you need continue to modify [precompile.go][precompile_main_file_link].
 
 For example, the original code is:
@@ -152,9 +149,9 @@ After you add ArbOS version control to the Nitro code, you can update ArbOS. You
 It should be noted that if you set a higher ArbOS version as the upgrade target, all the features added between the current and target versions will be activated.
 For example, if your current version is ArbOS v18 and you set the target version to v25, all the features between v18 and v25 will be loaded.
 
-[precompile_main_file_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/@nitroVersionTag@/@nitroPathToPrecompiles@/precompile.go
-[arbosstate_file_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/v3.1.0/@nitroPathToArbosState@/arbosstate.go
-[arbosstate_updatearbosversion_method_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/v3.1.0/arbos/@nitroPathToArbosState@/arbosstate.go#L253
-[block_processor_file_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/@nitroVersionTag@/@nitroPathToArbos@/block_processor.go
-[internal_tx_file_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/@nitroVersionTag@/@nitroPathToArbos@/internal_tx.go
-[tx_processor_file_link]: https://github.com/OffchainLabs/@nitroRepositorySlug@/blob/@nitroVersionTag@/@nitroPathToArbos@/tx_processor.go
+[precompile_main_file_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/@@nitroVersionTag=v3.4.0@@/@@nitroPathToPrecompiles=precompiles@@/precompile.go
+[arbosstate_file_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/v3.1.0/@@nitroPathToArbosState=arbos/arbosState@@/arbosstate.go
+[arbosstate_updatearbosversion_method_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/v3.1.0/arbos/@@nitroPathToArbosState=arbos/arbosState@@/arbosstate.go#L253
+[block_processor_file_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/@@nitroVersionTag=v3.4.0@@/@@nitroPathToArbos=arbos@@/block_processor.go
+[internal_tx_file_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/@@nitroVersionTag=v3.4.0@@/@@nitroPathToArbos=arbos@@/internal_tx.go
+[tx_processor_file_link]: https://github.com/OffchainLabs/@@nitroRepositorySlug=nitro@@/blob/@@nitroVersionTag=v3.4.0@@/@@nitroPathToArbos=arbos@@/tx_processor.go
